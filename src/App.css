@@ -1,0 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+
+  background-color: #efefef;
+  font-family: "Montserrat", sans-serif;
+  padding: 25px;
+  background: #fc466b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.row {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.weather-widget {
+  padding: 20px 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  justify-items: center;
+  background-color: #39434f;
+  color: white;
+  width: 25%;
+
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+
+  z-index: 1;
+}
+
+.weather_contanier {
+  display: flex;
+  width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.dropdown_weather {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.weather-icon {
+  font-size: 5rem;
+  animation: rotation 5s infinite linear;
+}
+
+.temp-c {
+  margin-bottom: 20px;
+}
+
+.location-country {
+  color: #fff;
+  font-weight: 300;
+}
+.weather-forecast {
+  width: 75%;
+}
+
+.forecast-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.forecast-item:hover {
+  background-color: rgb(243, 241, 241);
+  cursor: pointer;
+}
+.forecast-item h6 {
+  color: #888;
+  margin-top: 5px;
+}
+.forecast {
+  text-align: right;
+}
+
+.form_container {
+  position: relative;
+  display: flex;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.select select {
+  font-family: "Arial";
+  display: inline-block;
+  width: 90%;
+  cursor: pointer;
+  padding: 10px 15px 10px 0;
+  outline: 0;
+  border: 0px solid #000000;
+  border-bottom-color: rgb(0, 0, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 0px;
+  border-radius: 0px;
+  background: none;
+  color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0 auto !important;
+  border-bottom: 2px solid #ddd;
+  transition: all 0.2s;
+}
+.select select::-ms-expand {
+  display: none;
+}
+.select select:hover,
+.select select:focus {
+  color: #fff;
+  background: #176abf;
+  border-radius: 7px;
+}
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.select_arrow {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0px 5px;
+  border-color: #fff transparent transparent transparent;
+}
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow {
+  border-top-color: #fff;
+}
+.select select:disabled ~ .select_arrow {
+  border-top-color: #cccccc;
+}
+
+@media only screen and (max-width: 600px) {
+  .body {
+    flex-flow: column;
+  }
+  .weather-widget {
+    width: 100%;
+  }
+  .weather-forecast {
+    width: 100%;
+  }
+  .temp-c {
+    margin-bottom: 7px;
+  }
+}

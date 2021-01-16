@@ -1,2 +1,5 @@
-# Weather-app-reactjs
-Reactjs weather app, using context api and ract-hooks
+## Weather App with React Context API
+
+# Demo
+
+https://cemre-aktemur-weatherapp.netlify.app/
